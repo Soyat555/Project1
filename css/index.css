@@ -5,140 +5,59 @@
     list-style: none !important;
     text-decoration: none !important;
 }
-.header{
-   width: 100%;
-   margin-top: 15px;
-   /* height:70px; */
-   /* background-color: rgb(23, 23, 243);  */
+header{
+    background-color: #DDD;
 }
-.nav{
-     width: 40%;
-     /* height: 70px; */
-     /* background-color: red; */
-     margin-left: 130px;
+header .main-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.navbar{
-    width: 50%;
-    /* background-color: rgb(233, 79, 79); */
-    float: right;
-    margin-top: -35px;
-}
-.big-width:hover{
+header .main-box .logo img:hover{
     cursor: pointer;
 }
-.location{
-    width: 50%;
-    /* background-color: aquamarine; */
-    float: right;
-    margin-top: 16px;
+header .main-box .menu ul{
+    margin: 0;
+    padding: 0;
 }
-.navbar ul{
-    list-style-type: none;
+header .main-box .menu ul li{
+    display: inline-block;
 }
-.navbar ul li{
-    float: left;
+header .main-box .menu ul li a{
+    display: block;
+    padding: 10px 15px;
 }
-.navbar ul li a{
-    text-decoration: none;
-    padding-left: 20px;
-    font-size: 15px;
-    /* color: black; */
+header .main-box .icon-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.navbar ul li i{
-    padding-left: 3px;
-}
-.icon{
-    width: 20%;
-    /* background-color: aquamarine; */
-    float: right;
-}
-.search{
-    width: 16%;
-    /* background-color: blue; */
-}
-.search i{
-    font-size: 19px;
-}
-.shopping{
-    width: 15%;
-    /* background-color: rgb(160, 17, 17); */
-    margin-left: 33px;
-    margin-top: -24px;
-
-}
-.shopping i{
-    font-size: 19px;
-}
-.sign-in{
-    width: 50%;
-    background-color: rgb(37, 180, 8);
-    margin-left: 65px;
-    margin-top: -20px;
-    border-radius: 10px;
-    
-}
-.sign-in p{
-    font-size: 16px;
-    padding-left: 6px;
-}
-.search i:hover{
-    cursor: pointer;
-}
-.shopping i:hover{
-    cursor: pointer;
-}
-.sign-in p:hover{
-    cursor: pointer;
-}
-.location p:hover{
-    cursor: pointer;
-}
-.nav img:hover{
-    cursor: pointer;
-}
-.download-app{
-    width: 100%;
-    height: 41px;
-    background-color: rgb(4, 34, 34);
-    margin-top: 20px;
-}
-.title-download{
-    width: 40%;
-    /* background-color: red; */
-    margin-left: 130px;
-}
-.title-download img{
+header .main-box .icon-header i{
     width: 40px;
-}
-.title-download img:hover{
-    cursor: pointer;
-}
-.discount{
-    width: 35%;
-    /* background-color: black; */
-    margin-left: 190px;
-    margin-top: -31px;
-}
-.discount p{
+    height: 40px;
+    background-color: rgb(59, 65, 65);
     color: white;
-    padding-top: -4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin: 0px 10px;
 }
-.download-this-app-now{
-    width:17%;
-    height: 35px;
-    background-color: rgb(222, 222, 233);
-    margin-top: -28px;
-    margin-left: 1000px;
-    font-size: 18px;
-    border-radius: 10px;
+header .main-box .icon-header p{
+    background-color: rgb(59, 65, 65);
+    width: 80px;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+    color: #fff;
 }
-.download-this-app-now p{
-    padding-left:10px;
-    padding-top: 7px;
-}
-.download-this-app-now p:hover{
+header .main-box .icon-header p:hover{
     cursor: pointer;
-
+}
+header .main-box .icon-header i:hover{
+    cursor: pointer;
 }
 .banner{
     width: 80%;
@@ -278,7 +197,7 @@
 
 footer{
     width: 100%;
-    background-color: rgb(40, 30, 187);
+    background-color: rgb(66, 66, 68);
 }
 footer .main-box{
     width: 80%;
@@ -316,8 +235,7 @@ footer .main-box .box ul li a{
     display: none !important;
 }
 @media (min-width: 320px) and (max-width: 480px){
-    .header,
-    .download-app{
+    header{
         display: none !important;
     }
     .header-mobile{
@@ -449,4 +367,330 @@ footer .main-box .box ul li a{
     width: 100%;
     padding: 10px;
    }
+}
+@media (min-width: 481px) and (max-width: 767px){
+    header{
+        display: none !important;
+    }
+    .header-mobile{
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px;
+    }
+    .header-mobile .logo{
+        width: 150px;
+    }
+    .nav-mobile{
+        display: block !important;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #DDD;
+        overflow-x: hidden;
+        transition: 0.3s;
+        z-index: 200;
+    }
+    .nav-mobile ul{
+        padding-top: 70px;
+    }
+    .nav-mobile ul li{
+        padding: 10px;
+    }
+    .nav-mobile ul li a{
+        font-size: 15px;
+        font-family: Khmer OS Content;
+    }
+    .nav-mobile .close-menu i{
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .header-mobile .logo img{
+        width: 100%;
+    }
+    .header-mobile .icon i{
+        width: 40px;
+        height: 40px;
+        background-color: #ddd;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .blog-1{
+       width: 100%;
+       display: inline-block;
+       padding: 10px;
+   }
+   .blog-1 .box{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+   }
+
+   .blog-2{
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+   }
+   .blog-2 .box{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+   }
+
+   .mobile-app-banner{
+    width: 100%;
+    padding: 10px;
+}
+.mobile-app-banner .main-box{
+    width: 100%;
+    display: inline-block;
+    padding: 0px;
+   }
+   .mobile-app-banner .main-box .left{
+    width: 60%;
+    padding: 10px;
+   }
+   .mobile-app-banner .main-box .right{
+    width: 40%;
+    padding: 10px;
+   }
+   .mobile-app-banner .main-box .left h1{
+    width: 100%;
+    font-size: 20px;
+   }
+   .detail-1 .main-box{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+   }
+   .detail-1 .main-box .box{
+    width: 33.3%;
+    padding: 5px;
+    float: left;
+   }
+   footer .main-box{
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+   }
+   footer .main-box .footer-logo{
+    width: 60%;
+   }
+   footer .main-box .box{
+    width: 33.3%;
+    float: left;
+   }
+   footer .main-box .box h1{
+    font-size: 15px;
+   }
+
+   .banner{
+    width: 100%;
+    padding: 10px;
+   }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    header{
+        background-color: #DDD;
+        padding: 10px;
+    }
+    header .main-box .logo img{
+        width: 100%;
+    }
+    header .main-box .logo{
+        width: 150px;
+    }
+    header .main-box{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .main-box .menu ul{
+        margin: 0;
+        padding: 0;
+    }
+    header .main-box .menu ul li{
+        display: inline-block;
+    }
+    header .main-box .menu ul li a{
+        display: block;
+        padding: 5px;
+        font-size: 15px;
+    }
+    header .main-box .icon-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .main-box .icon-header i{
+        width: 40px;
+        height: 40px;
+        background-color: rgb(59, 65, 65);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        margin: 0px 5px;
+    }
+    header .main-box .icon-header p{
+        background-color: rgb(59, 65, 65);
+        width: 80px;
+        padding: 10px;
+        border-radius: 30px;
+        text-align: center;
+        color: #fff;
+    }
+    .header-mobile{
+        display: none !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px;
+    }
+    .header-mobile .logo{
+        width: 150px;
+    }
+    .nav-mobile{
+        display: block !important;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #DDD;
+        overflow-x: hidden;
+        transition: 0.3s;
+        z-index: 200;
+    }
+    .nav-mobile ul{
+        padding-top: 70px;
+    }
+    .nav-mobile ul li{
+        padding: 10px;
+    }
+    .nav-mobile ul li a{
+        font-size: 15px;
+        font-family: Khmer OS Content;
+    }
+    .nav-mobile .close-menu i{
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .header-mobile .logo img{
+        width: 100%;
+    }
+    .header-mobile .icon i{
+        width: 40px;
+        height: 40px;
+        background-color: #ddd;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .blog-1{
+       width: 100%;
+       display: inline-block;
+       padding: 10px;
+   }
+   .blog-1 .box{
+    width: 20%;
+    height: 100%;
+    float: left;
+   }
+
+   .blog-2{
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+   }
+   .blog-2 .box{
+    width: 16.6%;
+    height: 100%;
+    float: left;
+   }
+
+   .mobile-app-banner{
+    width: 100%;
+    padding: 10px;
+}
+.mobile-app-banner .main-box{
+    width: 100%;
+    display: inline-block;
+    padding: 0px;
+   }
+   .mobile-app-banner .main-box .left{
+    width: 60%;
+    padding: 10px;
+   }
+   .mobile-app-banner .main-box .right{
+    width: 40%;
+    padding: 10px;
+   }
+   .mobile-app-banner .main-box .left h1{
+    width: 100%;
+    font-size: 20px;
+   }
+   .detail-1 .main-box{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+   }
+   .detail-1 .main-box .box{
+    width: 25%;
+    padding: 5px;
+    float: left;
+   }
+   footer .main-box{
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+   }
+   footer .main-box .footer-logo{
+    width: 20%;
+   }
+   footer .main-box .box{
+    width: 25%;
+    float: left;
+   }
+   footer .main-box .box h1{
+    font-size: 15px;
+   }
+
+   .banner{
+    width: 100%;
+    padding: 10px;
+   }
+}
+.mobile-app-banner .main-box .left button:hover{
+    cursor: pointer;
 }
